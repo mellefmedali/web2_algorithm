@@ -1,0 +1,33 @@
+ALGORITHM first_task
+VAR;
+    i , n , vnbr: INTEGER;
+    phrase : string [500];
+BEGIN
+    Write("write a sentence that ends with a dot");
+    Read(phrase);
+    i := 0;
+    n := 0;
+    vnbr := 0;
+    // 
+    FOR i FROM O TO (phrase.length-1) STEP 1 DO
+        IF (phrase[i] = ".") THEN
+            break;
+        ELSE
+            IF (phrase[i] = " ") THEN
+                // nombre de mots
+                n:=n+1;
+            ELSE 
+            SWITCH (phrase[i]) DO
+                case "a" : vnbr:=nbr+1;break;
+                case "e" : vnbr:=nbr+1;break;
+                case "i" : vnbr:=nbr+1;break;
+                case "o" : vnbr:=nbr+1;break;
+                case "u" : vnbr:=nbr+1;break;
+                case "y" : vnbr:=nbr+1;break;
+            END_SWITCH
+            END_IF
+        END_IF
+    END_FOR
+    Write("Le nombre de mot est: " + n);
+    Write("Le nombre de voyelles est: " + vnbr);
+END
