@@ -1,0 +1,23 @@
+PROCEDURE swap(x,y: INTEGER)
+VAR
+    temp: INTEGER
+BEGIN
+    temp:=x;
+    x:=y;
+    y:=temp;
+END
+
+ALGORITHM insertion_sorting
+VAR
+    arr : ARRAY_OF integer[500];
+    i,j : INTEGER;
+BEGIN
+    Read(arr)
+    FOR i FROM 1 TO arr.length-1 STEP 1  DO
+        FOR j FROM 0 TO i-1 STEP 1  DO
+            IF (arr[i]<arr[j]) THEN
+                swap(arr[i], arr[j]);
+            END_IF
+        END_FOR
+    END_FOR
+END
